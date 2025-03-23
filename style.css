@@ -10,7 +10,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #d4d2c5, #8b704c); /* Subtle gradient */
+    background: linear-gradient(135deg, #d4d2c5, #8b704c);
     color: #4a3f35;
     text-align: center;
     letter-spacing: 1px;
@@ -19,7 +19,7 @@ body {
 
 /* Header Styling */
 header {
-    background: #4a5a35; /* Earthy green tone */
+    background: #4a5a35;
     color: white;
     padding: 15px 50px;
     position: fixed;
@@ -29,7 +29,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Prevent overlapping on smaller screens */
+    flex-wrap: wrap;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
@@ -43,12 +43,12 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #d8f3dc; /* Pale green tone */
+    color: #d8f3dc;
     font-weight: bold;
     font-size: 16px;
     padding: 12px 20px;
@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #8aa387; /* Deeper green hover effect */
+    background: #8aa387;
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
@@ -94,7 +94,7 @@ nav ul li a:hover {
 
 /* Footer Styling */
 footer {
-    background: #4a5a35; /* Consistent green tone */
+    background: #4a5a35;
     color: #d8f3dc;
     padding: 20px;
     position: fixed;
@@ -112,7 +112,7 @@ button, a {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 25px;
-    background: #5a4635; /* Neutral earth tone */
+    background: #5a4635;
     border: none;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -132,28 +132,29 @@ button:hover, a:hover {
     }
 
     header {
-        flex-direction: column; /* Stack header vertically */
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     nav ul {
-        flex-direction: column; /* Stack nav links */
+        flex-direction: column;
         gap: 10px;
     }
 
     .container {
-        padding: 20px; /* Reduce padding */
+        padding: 20px;
+        width: 90%;
     }
 
     .business-card {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
         margin: 15px 0;
         padding: 20px;
     }
 
     img {
-        max-width: 100%; /* Prevent overflow */
+        max-width: 100%;
         height: auto;
         margin: 10px auto;
     }
