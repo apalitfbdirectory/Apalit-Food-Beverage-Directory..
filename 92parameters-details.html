@@ -6,57 +6,121 @@
     <title>92 Parameters</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
         .container {
-            max-width: 900px;
-            margin: 80px auto 50px;
+            max-width: 100%;
+            width: 90%;
+            margin: 20px auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-
-        .menu-gallery, .sample-dishes, .inside-section {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .menu-item, .sample-dish, .inside-photo {
-            width: 30%;
+        /* Labels (headings) with more spacing */
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
             text-align: center;
         }
-
+        .menu-gallery, .sample-dishes, .inside-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .menu-item, .sample-dish, .inside-photo {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
         .menu-item img, .sample-dish img, .inside-photo img {
             width: 100%;
             height: auto;
-            max-height: 400px;
-            object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
         }
-
         .menu-item img:hover, .sample-dish img:hover, .inside-photo img:hover {
             transform: scale(1.05);
         }
-
         .back-button {
             display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
+            width: 90%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 10px;
             background-color: #8B4513;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            text-align: center;
             transition: background 0.3s ease;
         }
-
         .back-button:hover {
             background-color: #A0522D;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .inside-section {
+                flex-direction: column;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .inside-photo {
+                width: 90%;
+                max-width: 350px;
+            }
+            .container {
+                padding: 30px;
+            }
+        }
+        @media (min-width: 768px) {
+            .menu-item, .sample-dish {
+                width: 45%;
+            }
+            .inside-photo {
+                width: 45%;
+            }
+            .inside-section {
+                justify-content: center;
+            }
+            .back-button {
+                display: inline-block;
+            }
+        }
+        @media (min-width: 1024px) {
+            .menu-item, .sample-dish {
+                width: 30%;
+            }
+            .inside-photo {
+                width: 30%;
+            }
+        }
+        .menu-gallery {
+            margin-top: 40px;
+        }
+        .sample-dishes {
+            margin-top: 40px;
+        }
+        .inside-section {
+            margin-top: 40px;
+            justify-content: center; /* Fix alignment issue for Inside 92 Parameters */
         }
     </style>
 </head>
@@ -108,17 +172,8 @@
         <a href="https://maps.app.goo.gl/Joqx7KVcxPJ18q8AA" target="_blank" class="back-button">Show Location</a>
         <a href="index.html" class="back-button">Go Back</a>
     </div>
-
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <p>Email: apalitfoodbeverage@gmail.com</p>
-        <p>Phone: 0945-736-8973</p>
-    </section>
-
     <footer>
         <p>© 2025 Apalit Food & Beverage Directory | Made by Group 3 - SAIP</p>
-        <div class="watermark">
-        </div>
     </footer>
 </body>
 </html>
