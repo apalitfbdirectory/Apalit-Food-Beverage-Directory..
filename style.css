@@ -173,8 +173,8 @@ footer {
 
     .menu-gallery, .sample-dishes, .inside-cristine {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .menu-item, .sample-dish, .inside-photo {
