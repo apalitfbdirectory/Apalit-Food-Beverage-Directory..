@@ -169,7 +169,7 @@ footer {
         padding: 15px;
     }
 
-    .menu-gallery, .sample-dishes, .inside-cristine {
+    .menu-gallery, .sample-dishes, .inside-black-olives {
         flex-direction: column;
         align-items: center;
     }
@@ -188,6 +188,17 @@ footer {
     }
 
     h2, h3, p {
-        text-align: left; /* Optimized for better readability */
+        text-align: left;
+    }
+
+    .inside-black-olives {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .inside-photo {
+        flex: 0 0 45%;
     }
 }
