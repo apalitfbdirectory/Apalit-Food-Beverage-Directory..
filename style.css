@@ -89,6 +89,7 @@ nav ul li a:hover {
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     border: 2px solid rgba(154, 123, 90, 0.5);
+    text-align: left;
 }
 
 /* Business Card Styling */
@@ -124,6 +125,8 @@ nav ul li a:hover {
     max-width: 400px;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 15px;
+    align-self: center;
 }
 
 .business-card:hover {
@@ -134,7 +137,7 @@ nav ul li a:hover {
 /* Ensure Visibility for Buttons with Proper Colors */
 .business-card .social-buttons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
@@ -179,12 +182,14 @@ footer {
 
     .menu-item, .sample-dish, .inside-photo {
         width: 100%;
-        max-width: 100%;
+        max-width: 90%;
+        margin-bottom: 15px;
     }
 
     .menu-item img, .sample-dish img, .inside-photo img {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 10px;
     }
 }
