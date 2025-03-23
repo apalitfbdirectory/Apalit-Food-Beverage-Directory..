@@ -25,6 +25,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,11 @@ header {
     flex-wrap: wrap;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    left: 0;
+}
+
+/* Push content down to avoid overlap */
+main {
+    padding-top: 120px;
 }
 
 header h1 {
@@ -93,20 +98,43 @@ nav ul li a:hover {
     margin: 20px 0;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
     cursor: pointer;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .business-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Ensure Visibility for Buttons with Proper Colors */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.business-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Button Animations */
 .business-card .social-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
@@ -120,21 +148,6 @@ nav ul li a:hover {
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
     text-align: center;
-}
-
-.business-card .social-buttons a[href*="instagram"] {
-    background: red;
-    color: white;
-}
-
-.business-card .social-buttons a[href*="facebook"] {
-    background: blue;
-    color: white;
-}
-
-.business-card .social-buttons a[href*="details"] {
-    background: brown;
-    color: white;
 }
 
 .business-card .social-buttons a:hover {
@@ -158,33 +171,18 @@ footer {
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
-    .business-card .social-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    .business-card .social-buttons a {
-        width: 80%;
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
     .container {
         max-width: 95%;
         margin: 50px auto;
         padding: 15px;
     }
 
-    h2, h3, h4 {
-        font-size: 1.2em; /* Mas maliit na font size */
-    }
-
-    p {
-        font-size: 0.95em;
-        line-height: 1.4;
+    .business-card {
+        width: 100%;
     }
 
     .menu-gallery, .sample-dishes, .inside-cristine {
-        flex-direction: column; /* Stacked view para sa mobile */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -193,18 +191,7 @@ footer {
     }
 
     .menu-item img, .sample-dish img, .inside-photo img {
-        height: auto; /* Para hindi compressed ang images */
+        height: auto;
         max-width: 100%;
-    }
-
-    iframe {
-        width: 100%;
-        height: 300px; /* Para kasya sa mobile screens */
-    }
-
-    .back-button {
-        display: block;
-        width: 100%;
-        text-align: center;
     }
 }
