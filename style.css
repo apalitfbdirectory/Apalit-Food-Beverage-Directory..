@@ -21,7 +21,7 @@ body {
 header {
     background: #4a5a35;
     color: white;
-    padding: 15px 20px;
+    padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -35,8 +35,10 @@ header {
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 18px;
     margin: 5px 0;
+    flex: 1;
+    text-align: center;
 }
 
 nav {
@@ -48,9 +50,9 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 nav ul li a {
@@ -58,7 +60,7 @@ nav ul li a {
     color: #d8f3dc;
     font-weight: bold;
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
@@ -68,7 +70,7 @@ nav ul li a:hover {
     background: #8aa387;
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Main Content Styling */
@@ -146,10 +148,15 @@ button:hover, a:hover {
         padding: 10px;
     }
 
+    header h1 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
     nav ul {
         flex-direction: column;
-        gap: 8px;
-        text-align: center;
+        gap: 5px;
+        padding: 5px 0;
     }
 
     .container {
