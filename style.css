@@ -161,6 +161,28 @@ footer {
     text-align: center;
 }
 
+/* Fix for Photo Layout */
+.inside-black-olives {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    gap: 20px !important;
+    padding: 10px !important;
+    width: 100% !important;
+}
+
+.inside-photo {
+    flex: 0 1 30% !important;
+    max-width: 30% !important;
+}
+
+.inside-photo img {
+    width: 100% !important;
+    min-width: 250px !important;
+    height: auto !important;
+    border-radius: 10px !important;
+}
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .container {
@@ -169,36 +191,19 @@ footer {
         padding: 15px;
     }
 
-    .menu-gallery, .sample-dishes, .inside-black-olives {
+    .inside-black-olives {
         flex-direction: column;
         align-items: center;
     }
 
-    .menu-item, .sample-dish, .inside-photo {
-        width: 100%;
-        max-width: 90%;
+    .inside-photo {
+        width: 100% !important;
+        max-width: 90% !important;
         margin-bottom: 15px;
     }
 
-    .menu-item img, .sample-dish img, .inside-photo img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 10px;
-    }
-
-    h2, h3, p {
-        text-align: left;
-    }
-
-    .inside-black-olives {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        justify-content: space-between;
-    }
-    .inside-photo {
-        flex: 0 0 45%;
+    .inside-photo img {
+        width: 100% !important;
+        height: auto !important;
     }
 }
