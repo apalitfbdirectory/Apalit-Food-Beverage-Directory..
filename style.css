@@ -1,0 +1,182 @@
+/* Enhanced Earth Tone Aesthetic Design */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background: linear-gradient(135deg, #d4d2c5, #8b704c); /* Softer gradient with earth tones */
+    color: #4a3f35;
+    text-align: center;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+header {
+    background: #4a5a35; /* Olive green for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d8f3dc; /* Light green hover effect */
+    font-weight: bold;
+    padding: 12px 20px;
+    transition: 0.3s ease;
+    border-radius: 25px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    background: #8aa387; /* Deeper green hover color */
+    color: white;
+    box-shadow: 0 0 15px rgba(138, 163, 135, 0.8);
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 120px auto 80px;
+    padding: 30px;
+    background: rgba(242, 235, 224, 0.8); /* Soft earth-tone background */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    border: 2px solid rgba(154, 123, 90, 0.5);
+    letter-spacing: 1px;
+}
+
+.business-card {
+    background: linear-gradient(145deg, #d9cbb6, #c5ac8d); /* Subtle halftone gradient */
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease;
+    cursor: pointer;
+    font-size: 18px;
+    border: none; /* Removed borders */
+}
+
+/* Styling for email links */
+.business-card a {
+    text-decoration: none; /* Removes underlines */
+    color: inherit; /* Matches the normal text color */
+    font-weight: normal; /* Standard text style */
+    background: none; /* No background */
+    border: none; /* No borders */
+    cursor: pointer;
+}
+
+.business-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+footer {
+    background: #4a5a35; /* Olive green footer */
+    color: #d8f3dc;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Watermark Styling */
+.watermark {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling for Consistency */
+button, a {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #5a4635;
+    color: white;
+    text-decoration: none;
+}
+
+button:hover, a:hover {
+    background: #8aa387; /* Olive green hover effect */
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px;
+    }
+
+    .container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .business-card {
+        width: 100%; /* Ensure cards use full width */
+        margin: 15px 0;
+        padding: 20px; /* Adjust padding to fit smaller screens */
+    }
+
+    img {
+        max-width: 100%; /* Prevent images from overflowing */
+        height: auto; /* Keep aspect ratio */
+    }
+
+    button, a {
+        font-size: 14px; /* Slightly smaller buttons */
+        padding: 8px 15px; /* Reduce padding */
+    }
+}

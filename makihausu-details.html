@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header>
+        <h1>Apalit Food & Beverage Directory</h1>
+    </header>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makihausu Japanese Restaurant</title>
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 80px auto 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .menu-section {
+            margin-top: 20px;
+        }
+        .menu-section img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-section img:hover {
+            transform: scale(1.05);
+        }
+        .sample-dishes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .sample-dish-item {
+            text-align: center;
+        }
+        .sample-dishes img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .sample-dishes img:hover {
+            transform: scale(1.05);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #5a4635;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background: #8b5e3c;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="japlogo.jpg" alt="Makihausu Japanese Restaurant Logo" style="width: 120px; margin-bottom: 15px;">
+        <h2>Makihausu Japanese Restaurant Menu</h2>
+        <p>Experience the rich flavors of authentic Japanese dishes at Makihausu. Freshly prepared with love and served with pride.</p>
+
+        <!-- Menu Section -->
+        <div class="menu-section">
+            <img src="japanese.jpg" alt="Japanese Menu">
+        </div>
+
+        <!-- Sample Dishes Section -->
+        <h3>Our Signature Dishes</h3>
+        <div class="sample-dishes">
+            <div class="sample-dish-item">
+                <img src="sample1.jpg" alt="Chicken Karaage">
+                <h4>Chicken Karaage</h4>
+                <p>A Japanese fried chicken dish with a crispy, flavorful exterior and tender, juicy meat inside. Perfectly seasoned and served with a tangy dipping sauce.</p>
+            </div>
+            <div class="sample-dish-item">
+                <img src="sample2.jpg" alt="Ramen">
+                <h4>Ramen</h4>
+                <p>A hearty bowl of ramen noodles served in a rich, savory broth, topped with tender pork, a boiled egg, and fresh vegetables for the ultimate comfort food experience.</p>
+            </div>
+            <div class="sample-dish-item">
+                <img src="sample 3.jpg" alt="Tonkatsu">
+                <h4>Tonkatsu</h4>
+                <p>Golden-fried pork cutlet, crispy on the outside and juicy on the inside, served with shredded cabbage, rice, and a tangy tonkatsu sauce.</p>
+            </div>
+        </div>
+
+        <!-- Button to open the map modal -->
+        <button id="openMapBtn" class="back-button">Show Location</button>
+
+        <!-- Modal for Google Maps -->
+        <div id="mapModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalBtn">&times;</span>
+                <h3>Find Us Here:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.723005887763!2d120.75644767595209!3d14.952517768362169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396574980692619%3A0x4a7527fb9ddfddaf!2sMakihausu%20Food%20Products%20Trading!5e0!3m2!1sen!2sph!4v1742571132830!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+        // Get modal elements
+        var modal = document.getElementById("mapModal");
+        var openBtn = document.getElementById("openMapBtn");
+        var closeBtn = document.getElementById("closeModalBtn");
+
+        // Open modal
+        openBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+<section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: apalitfoodbeverage@gmail.com</p>
+    <p>Phone: 0945-736-8973</p>
+</section>
+
+<footer>
+    <p>© 2025 Apalit Food & Beverage Directory | Made by Group 3 - SAIP</p>
+    <div class="watermark">
+        <p>Made by Group 3 - SAIP</p>
+    </div>
+</footer>
+</body>
+</html>

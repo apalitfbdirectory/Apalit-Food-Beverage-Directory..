@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header>
+        <h1>Apalit Food & Beverage Directory</h1>
+    </header>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apalet's BBQ and Restaurant</title>
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 80px auto 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .menu-gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            width: 30%;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 400px; /* Consistent height for images */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-item img:hover {
+            transform: scale(1.05); /* Adds hover interactivity */
+        }
+
+        .sample-dishes, .inside-section {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .sample-dish, .inside-photo {
+            text-align: center;
+            width: 30%;
+        }
+
+        .sample-dish img, .inside-photo img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sample-dish img:hover, .inside-photo img:hover {
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #5a4635;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background: #8b5e3c;
+        }
+
+        /* Styling for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="bbqlogo.jpg" alt="Apalet's BBQ and Restaurant Logo" style="width: 120px; margin-bottom: 15px;">
+        <h1>Welcome to Apalet's BBQ and Restaurant</h1>
+        <p>Savor the rich flavors of grilled and smoked goodness, perfect for every barbecue enthusiast!</p>
+
+        <!-- Styled Menu Section -->
+        <h3>Apalet's BBQ Menu</h3>
+        <div class="menu-gallery">
+            <div class="menu-item">
+                <img src="bbqmenu1.jpg" alt="BBQ Menu Item 1">
+            </div>
+            <div class="menu-item">
+                <img src="bbqmenu2.jpg" alt="BBQ Menu Item 2">
+            </div>
+            <div class="menu-item">
+                <img src="bbqmenu3.jpg" alt="BBQ Menu Item 3">
+            </div>
+            <div class="menu-item">
+                <img src="bbqmenu4.jpg" alt="BBQ Menu Item 4">
+            </div>
+        </div>
+
+        <!-- Sample Dishes Section -->
+        <h3>Our Signature Dishes</h3>
+        <div class="sample-dishes">
+            <div class="sample-dish">
+                <img src="bbqsample1.jpg" alt="Signature Dish 1">
+                <h4>Grilled Pork Belly</h4>
+                <p>Succulent pork belly grilled to perfection with a savory barbecue glaze.</p>
+            </div>
+            <div class="sample-dish">
+                <img src="bbqsample2.jpg" alt="Signature Dish 2">
+                <h4>Smoked Ribs</h4>
+                <p>Fall-off-the-bone ribs smoked to achieve a rich, smoky flavor.</p>
+            </div>
+            <div class="sample-dish">
+                <img src="bbqsample3.jpg" alt="Signature Dish 3">
+                <h4>Barbecue Chicken</h4>
+                <p>Juicy chicken marinated in special spices, grilled to perfection.</p>
+            </div>
+        </div>
+
+        <!-- Inside Section -->
+        <h3>Inside Apalet's BBQ</h3>
+        <div class="inside-section">
+            <div class="inside-photo"><img src="bbqinside1.jpg" alt="Inside View 1"></div>
+            <div class="inside-photo"><img src="bbqinside2.jpg" alt="Inside View 2"></div>
+        </div>
+
+        <!-- Map Modal Section -->
+        <button id="openMapBtn" class="back-button">Show Location</button>
+        <div id="mapModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalBtn">&times;</span>
+                <h3>Find Us Here:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.907067161319!2d120.75573653276787!3d14.942270063981303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396571f708ca8ab%3A0xa7c490845c3bd90f!2sApalet&#39;s%20BBQ%20and%20Restaurant!5e0!3m2!1sen!2sph!4v1742715580938!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+        var modal = document.getElementById("mapModal");
+        var openBtn = document.getElementById("openMapBtn");
+        var closeBtn = document.getElementById("closeModalBtn");
+
+        openBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+<section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: apalitfoodbeverage@gmail.com</p>
+    <p>Phone: 0945-736-8973</p>
+</section>
+
+<footer>
+    <p>© 2025 Apalit Food & Beverage Directory | Made by Group 3 - SAIP</p>
+    <div class="watermark">
+        <p>Made by Group 3 - SAIP</p>
+    </div>
+</footer>
+</body>
+</html>

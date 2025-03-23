@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header>
+        <h1>Apalit Food & Beverage Directory</h1>
+    </header>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>92 Parameters</title>
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 80px auto 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .menu-gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .menu-item {
+            width: 30%;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 400px; /* Extended height for emphasis */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-item img:hover {
+            transform: scale(1.05); /* Adds hover interactivity */
+        }
+
+        .sample-dishes, .inside-section {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .sample-dish, .inside-photo {
+            text-align: center;
+            width: 30%;
+        }
+
+        .sample-dish img, .inside-photo img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sample-dish img:hover, .inside-photo img:hover {
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #5a4635;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background: #8b5e3c;
+        }
+
+        /* Styling for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="logo2.jpg" alt="92 Parameters Logo" style="width: 120px; margin-bottom: 15px;">
+        <h1>Welcome to 92 Parameters Café</h1>
+        <p>Indulge in high-quality coffee, mouthwatering dishes, and a cozy ambiance. Join us at 92 Parameters Café for unforgettable moments!</p>
+
+        <!-- Styled Menu Section -->
+        <h3>92 Parameters Menu</h3>
+        <div class="menu-gallery">
+            <div class="menu-item">
+                <img src="92menu1.png" alt="Menu 1">
+            </div>
+            <div class="menu-item">
+                <img src="92menu2.png" alt="Menu 2">
+            </div>
+            <div class="menu-item">
+                <img src="92menu3.png" alt="Menu 3">
+            </div>
+        </div>
+        <div class="menu-gallery">
+            <div class="menu-item">
+                <img src="92menu4.png" alt="Menu 4">
+            </div>
+            <div class="menu-item">
+                <img src="92menu5.png" alt="Menu 5">
+            </div>
+        </div>
+
+        <!-- Sample Dishes & Drinks Section -->
+        <h3>Our Signature Dishes and Drinks.</h3>
+        <div class="sample-dishes">
+            <div class="sample-dish">
+                <img src="92 sample1.jpg" alt="Sample Dish 1">
+                <h4>Waffle with Ice Cream</h4>
+                <p>A warm, crispy waffle topped with smooth, creamy ice cream. Perfect for dessert lovers!</p>
+            </div>
+            <div class="sample-dish">
+                <img src="92 sample2.jpg" alt="Sample Drink 2">
+                <h4>Salted Creamcheese Matcha Latte</h4>
+                <p>A rich, creamy matcha latte with a savory salted creamcheese topping. A perfect blend of sweet and savory.</p>
+            </div>
+            <div class="sample-dish">
+                <img src="92 sample3.jpg" alt="Sample Dish 3">
+                <h4>Creamy Jack Daniel's Chicken</h4>
+                <p>Juicy chicken breast cooked in a rich Jack Daniel's cream sauce. A perfect dish for any occasion.</p>
+            </div>
+        </div>
+
+        <!-- Inside Section -->
+        <h3>Inside 92 Parameters</h3>
+        <div class="inside-section">
+            <div class="inside-photo"><img src="92inside1.jpg" alt="Inside View 1"></div>
+            <div class="inside-photo"><img src="92inside2.jpg" alt="Inside View 2"></div>
+            <div class="inside-photo"><img src="92inside3.jpg" alt="Inside View 3"></div>
+        </div>
+
+        <!-- Map Modal Section -->
+        <button id="openMapBtn" class="back-button">Show Location</button>
+        <div id="mapModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalBtn">&times;</span>
+                <h3>Find Us Here:</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.250356664099!2d120.75090427595237!3d14.978801367703692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f9662e4d754d%3A0x65506d6f20830ba9!2s92%20Parameters!5e0!3m2!1sen!2sph!4v1742569706871!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+        var modal = document.getElementById("mapModal");
+        var openBtn = document.getElementById("openMapBtn");
+        var closeBtn = document.getElementById("closeModalBtn");
+
+        openBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+<section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: apalitfoodbeverage@gmail.com</p>
+    <p>Phone: 0945-736-8973</p>
+</section>
+
+<footer>
+    <p>© 2025 Apalit Food & Beverage Directory | Made by Group 3 - SAIP</p>
+    <div class="watermark">
+        <p>Made by Group 3 - SAIP</p>
+    </div>
+</footer>
+</body>
+</html>
