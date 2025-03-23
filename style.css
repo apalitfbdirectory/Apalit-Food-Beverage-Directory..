@@ -44,6 +44,12 @@ nav ul {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav ul li a {
@@ -55,6 +61,7 @@ nav ul li a {
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    display: block;
 }
 
 nav ul li a:hover {
@@ -84,7 +91,7 @@ nav ul li a:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
 }
 
 .business-card:hover {
@@ -97,11 +104,12 @@ footer {
     background: #4a5a35;
     color: #d8f3dc;
     padding: 20px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     font-size: 16px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 /* Button & Link Styling */
@@ -141,7 +149,6 @@ button:hover, a:hover {
     nav ul {
         flex-direction: column;
         gap: 10px;
-        padding: 10px 0;
     }
 
     .container {
@@ -154,7 +161,6 @@ button:hover, a:hover {
         width: 100%;
         margin: 15px 0;
         padding: 20px;
-        text-align: center;
     }
 
     img {
