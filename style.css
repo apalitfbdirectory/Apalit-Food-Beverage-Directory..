@@ -35,7 +35,6 @@ header {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Push content down to avoid overlap */
 main {
     padding-top: 120px;
 }
@@ -80,7 +79,6 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Main Content Styling */
 .container {
     max-width: 1100px;
     margin: 120px auto 80px;
@@ -92,7 +90,6 @@ nav ul li a:hover {
     text-align: left;
 }
 
-/* Business Card Styling */
 .business-card {
     background: linear-gradient(145deg, #d9cbb6, #c5ac8d);
     padding: 25px;
@@ -134,7 +131,6 @@ nav ul li a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Ensure Visibility for Buttons with Proper Colors */
 .business-card .social-buttons {
     display: flex;
     justify-content: center;
@@ -153,7 +149,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* Footer Styling */
 footer {
     background: #4a5a35;
     color: #d8f3dc;
@@ -169,13 +164,12 @@ footer {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .container {
-        max-width: 100%;
-        margin: 50px auto;
+        max-width: 95%;
+        margin: 20px auto;
         padding: 15px;
     }
 
     .menu-gallery, .sample-dishes, .inside-cristine {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -191,5 +185,9 @@ footer {
         height: auto;
         display: block;
         border-radius: 10px;
+    }
+
+    h2, h3, p {
+        text-align: left; /* Optimized for better readability */
     }
 }
