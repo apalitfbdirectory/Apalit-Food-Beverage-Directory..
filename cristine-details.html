@@ -15,6 +15,14 @@
             background-color: #f4f4f4;
             text-align: center;
         }
+        header {
+            background-color: #4a5a35; /* Updated Color */
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            text-align: center;
+            z-index: 10;
+        }
         .container {
             max-width: 100%;
             width: 90%;
@@ -24,6 +32,7 @@
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             text-align: center;
+            margin-top: 20px;
         }
         h3 {
             margin-top: 40px;
@@ -59,7 +68,7 @@
             max-width: 300px;
             margin: 20px auto;
             padding: 10px;
-            background-color: #8B4513;
+            background-color: #8B4513; /* Original Button Color */
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -68,7 +77,7 @@
             transition: background 0.3s ease;
         }
         .back-button:hover {
-            background-color: #A0522D;
+            background-color: #A0522D; /* Original Hover Color */
         }
         footer {
             text-align: center;
@@ -76,58 +85,11 @@
             font-size: 14px;
             margin-top: 40px;
         }
-        @media (max-width: 768px) {
-            .inside-section {
-                flex-direction: column;
-                align-items: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .inside-photo {
-                width: 90%;
-                max-width: 350px;
-            }
-            .container {
-                padding: 30px;
-            }
-        }
-        @media (min-width: 768px) {
-            .menu-item, .sample-dish {
-                width: 45%;
-            }
-            .inside-photo {
-                width: 45%;
-            }
-            .inside-section {
-                justify-content: center;
-            }
-            .back-button {
-                display: inline-block;
-            }
-        }
-        @media (min-width: 1024px) {
-            .menu-item, .sample-dish {
-                width: 30%;
-            }
-            .inside-photo {
-                width: 30%;
-            }
-        }
-        .menu-gallery {
-            margin-top: 40px;
-        }
-        .sample-dishes {
-            margin-top: 40px;
-        }
-        .inside-section {
-            margin-top: 40px;
-            justify-content: center;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Bite My City - Apalit’s Local FBS Directory</h1>
+        <h1>Bite My City - Apalit Food & Beverage Directory</h1>
     </header>
 
     <div class="container">
@@ -147,33 +109,33 @@
         <h3>Our Signature Dishes & Drinks</h3>
         <div class="sample-dishes">
             <div class="sample-dish">
-                <img src="cristine sample.jpg" alt="Signature Dish 1">
+                <img src="cristine sample.jpg" alt="Enchanted Lychee">
                 <h4>Enchanted Lychee</h4>
-                <p>A refreshing dessert that captures the essence of tropical lychees. A perfect balance of sweet and tangy, with a delicate touch of enchantment in every bite.</p>
+                <p>A refreshing dessert that captures the essence of tropical lychees.</p>
             </div>
             <div class="sample-dish">
-                <img src="cristine sample1.jpg" alt="Signature Dish 2">
+                <img src="cristine sample1.jpg" alt="Pistachio Bar">
                 <h4>Pistachio Bar</h4>
-                <p>This creamy, nutty treat brings together the rich flavor of pistachios, making every bite a satisfying crunch. A delightful snack to pair with your coffee.</p>
+                <p>A nutty, creamy treat that pairs perfectly with coffee.</p>
             </div>
             <div class="sample-dish">
-                <img src="cristine sample 2.jpg" alt="Signature Dish 3">
+                <img src="cristine sample 2.jpg" alt="Cheesecake">
                 <h4>Cheesecake</h4>
-                <p>Indulge in the smooth and velvety texture of our signature cheesecake. With a buttery graham crust, this dessert is the perfect balance of rich and creamy.</p>
+                <p>Rich and velvety cheesecake with a buttery graham crust.</p>
             </div>
         </div>
 
         <h3>Inside Cristine Coffee + Cakes</h3>
         <div class="inside-section">
-            <div class="inside-photo"><img src="cristineinside1.jpg" alt="Inside View 1"style="height: 400px; object-fit: cover;"></div>
-            <div class="inside-photo"><img src="cristineinside2.jpg" alt="Inside View 2"style="height: 400px; object-fit: cover;"></div>
-            <div class="inside-photo"><img src="cristineinside3.jpg" alt="Inside View 3"style="height: 400px; object-fit: cover;"></div>
+            <div class="inside-photo"><img src="cristineinside1.jpg" alt="Inside View 1"></div>
+            <div class="inside-photo"><img src="cristineinside2.jpg" alt="Inside View 2"></div>
+            <div class="inside-photo"><img src="cristineinside3.jpg" alt="Inside View 3"></div>
         </div>
 
         <a href="https://maps.app.goo.gl/GwxdVLtSMLtGBFcT7" target="_blank" class="back-button">Show Location</a>
         <a href="index.html" class="back-button">Go Back</a>
     </div>
-
+    
     <footer>
         <p>© 2025 Bite My City - Apalit Food & Beverage Directory | Made by Group 3 - SAIP</p>
     </footer>
