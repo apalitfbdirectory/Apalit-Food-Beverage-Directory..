@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara G Mangan-Apalit Main</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 100%;
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .menu-gallery, .sample-dishes, .inside-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .menu-item, .sample-dish, .inside-photo {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .menu-item img, .sample-dish img, .inside-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-item img:hover, .sample-dish img:hover, .inside-photo img:hover {
+            transform: scale(1.05);
+        }
+        .back-button {
+            display: inline-block;
+            width: 90%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #A0522D;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Apalit Food & Beverage Directory</h1>
+    </header>
+
+    <div class="container">
+        <img src="glogo.jpg" alt="Tara G Mangan-Apalit Main Logo" style="width: 120px; margin-bottom: 15px;">
+        <h1>Welcome to Tara G Mangan-Apalit Main</h1>
+        <p>Experience authentic and unlimited samgyupsal at Tara G Mangan! Enjoy premium meats, fresh side dishes, and an unforgettable dining experience.</p>
+
+        <h3>Tara G Mangan Menu</h3>
+        <div class="menu-gallery">
+            <div class="menu-item"><img src="gmenu1.jpg" alt="Menu 1"></div>
+            <div class="menu-item"><img src="gmenu2.jpg" alt="Menu 2"></div>
+        </div>
+
+        <h3>Our Signature Dishes</h3>
+        <div class="sample-dishes">
+            <div class="sample-dish"><img src="gsample1.jpg" alt="Sample Dish 1"></div>
+            <div class="sample-dish"><img src="gsample2.jpg" alt="Sample Dish 2"></div>
+            <div class="sample-dish"><img src="gsample3.jpg" alt="Sample Dish 3"></div>
+        </div>
+
+        <h3>Inside Tara G Mangan</h3>
+        <div class="inside-section">
+            <div class="inside-photo"><img src="ginside1.jpg" alt="Inside View 1"style="height: 400px; object-fit: cover;"></div>
+            <div class="inside-photo"><img src="ginside2.jpg" alt="Inside View 2"style="height: 400px; object-fit: cover;"></div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/mnLS8xWvWVFwqDG96" target="_blank" class="back-button">Show Location</a>
+        <a href="index.html" class="back-button">Go Back</a>
+    </div>
+    
+    <footer>
+        <p>© 2025 Apalit Food & Beverage Directory | Made by Group 3 - SAIP</p>
+    </footer>
+</body>
+</html>
