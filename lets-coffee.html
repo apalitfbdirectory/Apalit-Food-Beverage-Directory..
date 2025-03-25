@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite My City - Apalit Food & Beverage Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="lightbox.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 100%;
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .menu-gallery, .sample-dishes, .inside-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .menu-item, .sample-dish, .inside-photo {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .menu-item img, .sample-dish img, .inside-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-item img:hover, .sample-dish img:hover, .inside-photo img:hover {
+            transform: scale(1.05);
+        }
+        .back-button {
+            display: inline-block;
+            width: 90%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #A0522D;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative; z-index: 10; background-color: #4a5a35; color: white; padding: 20px; text-align: center;">
+        <h1>Bite My City - Apalit Food & Beverage Directory</h1>
+    </header>
+    
+    <div class="container">
+        <img src="letslogo.jpg" alt="Let's Coffee Shop Logo" style="width: 120px; margin-bottom: 15px;">
+        <h1>Welcome to Let’s Coffee Shop</h1>
+        <p>Do what makes you happy. 💖✨💕</p>
+
+        <h3>Menu</h3>
+        <div class="menu-gallery">
+            <div class="menu-item"><img src="letsmenu.png" alt="Menu"></div>
+        </div>
+
+        <h3>Our Signature Drinks & Snacks</h3>
+        <div class="sample-dishes">
+            <div class="sample-dish">
+                <img src="letsdrinks1.jpg" alt="Milky Biscoff">
+                <h4>Milky Biscoff</h4>
+                <p>A creamy and rich drink infused with Biscoff flavor, perfect for sweet lovers!</p>
+            </div>
+            <div class="sample-dish">
+                <img src="letsdrinks2.jpg" alt="Croffles">
+                <h4>Croffles</h4>
+                <p>A delightful fusion of croissant and waffle, crispy on the outside and soft inside.</p>
+            </div>
+            <div class="sample-dish">
+                <img src="letsdrinks3.jpg" alt="Pink Salt Latte">
+                <h4>Pink Salt Latte</h4>
+                <p>A unique blend of coffee with a hint of pink Himalayan salt for a balanced taste.</p>
+            </div>
+        </div>
+
+        <h3>Inside Let’s Coffee Shop</h3>
+        <div class="inside-section">
+            <div class="inside-photo"><img src="letsinside1.jpg" alt="Inside View 1"></div>
+            <div class="inside-photo"><img src="letsinside2.jpg" alt="Inside View 2"></div>
+            <div class="inside-photo"><img src="letsinside3.jpg" alt="Inside View 3"></div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/cvCmM1iQ9XfqqQrV9" target="_blank" class="back-button">Show Location</a>
+        <a href="index.html" class="back-button">Go Back</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Bite My City - Apalit Food & Beverage Directory | Made by Group 3 - SAIP</p>
+    </footer>
+</body>
+</html>
